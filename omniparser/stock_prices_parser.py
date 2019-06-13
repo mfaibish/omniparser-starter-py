@@ -4,6 +4,12 @@ import os
 import pandas
 
 def calculate_latest_closing_price_from_json(filepath):
+    with open(filepath,"r") as f:
+        file_contents = f.read()
+    
+    stock_price = json.loads(file_contents)
+    print(stock_price)
+
     return 10000
 
 if __name__ == "__main__":
